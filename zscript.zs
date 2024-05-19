@@ -21,14 +21,17 @@ class HDHitsparksHandler : EventHandler
 			Vector2 angles = (-cos(puff.angle), -sin(puff.angle));
 			double pitch = sin(puff.pitch);
 
+			// because scale is sometimes negative
+			Vector2 trueScale = (abs(puff.Scale.X), abs(puff.Scale.Y));
+
 			// big smoke fog thing
 			// very slow
-			particle.Size = 30 * puff.Scale.X;
+			particle.Size = 30 * trueScale.X;
 			for (int i = 0; i < 4; i++)
 			{
 				bool left = Random(True, False);
 
-				particle.Lifetime = TICRATE * FRandom(8, 12) * puff.Scale.X;
+				particle.Lifetime = TICRATE * FRandom(8, 12) * trueScale.X;
 				particle.Pos = e.Thing.Pos + (FRandom(-3, 3), FRandom(-3, 3), FRandom(-3, 3));
 				particle.Vel = (FRandom(0, 0.2) * angles.x + FRandom(-0.5, 0.5), FRandom(0, 0.2) * angles.y + FRandom(-0.5, 0.5), FRandom(0, 0.2) * pitch + FRandom(-0.5, 0.5));
 				particle.Accel = (0, 0, -0.0025);
@@ -43,12 +46,12 @@ class HDHitsparksHandler : EventHandler
 			}
 
 			// smoke mid
-			particle.Size = 20 * puff.Scale.X;
+			particle.Size = 20 * trueScale.X;
 			for (int i = 0; i < 4; i++)
 			{
 				bool left = Random(True, False);
 
-				particle.Lifetime = TICRATE * FRandom(3, 6) * puff.Scale.X;
+				particle.Lifetime = TICRATE * FRandom(3, 6) * trueScale.X;
 				particle.Pos = e.Thing.Pos + (FRandom(-3, 3), FRandom(-3, 3), FRandom(-3, 3));
 				particle.Vel = (FRandom(0, 0.5) * angles.x, FRandom(0, 0.5) * angles.y, FRandom(0, 0.5) * pitch);
 				particle.Accel = (0, 0, -0.005);
@@ -63,12 +66,12 @@ class HDHitsparksHandler : EventHandler
 			}
 
 			// small smoke
-			particle.Size = 10 * puff.Scale.X;
+			particle.Size = 10 * trueScale.X;
 			for (int i = 0; i < 4; i++)
 			{
 				bool left = Random(True, False);
 
-				particle.Lifetime = TICRATE * FRandom(1, 3) * puff.Scale.X;
+				particle.Lifetime = TICRATE * FRandom(1, 3) * trueScale.X;
 				particle.Pos = e.Thing.Pos + (FRandom(-3, 3), FRandom(-3, 3), FRandom(-3, 3));
 				particle.Vel = (FRandom(0.5, 1.0) * angles.x, FRandom(0.5, 1.0) * angles.y, FRandom(0.5, 1.0) * pitch);
 				particle.Accel = (0, 0, -0.005);
@@ -91,14 +94,16 @@ class HDHitsparksHandler : EventHandler
 			particle.Flags = SPF_RELATIVE | SPF_ROLL | SPF_REPLACE;
 			particle.Color1 = "#808080";
 
+			Vector2 trueScale = (abs(puff.Scale.X), abs(puff.Scale.Y));
+
 			// big smoke fog thing
 			// very slow
-			particle.Size = 50 * puff.Scale.X;
+			particle.Size = 50 * trueScale.X;
 			for (int i = 0; i < 8; i++)
 			{
 				bool left = Random(True, False);
 
-				particle.Lifetime = TICRATE * FRandom(8, 12) * puff.Scale.X;
+				particle.Lifetime = TICRATE * FRandom(8, 12) * trueScale.X;
 				particle.Pos = e.Thing.Pos + (FRandom(-20, 20), FRandom(-20, 20), FRandom(-20, 20));
 				particle.Vel = (FRandom(-0.5, 0.5), FRandom(-0.5, 0.5), FRandom(-0.5, 0.5));
 				particle.Accel = (0, 0, -0.0025);
@@ -113,12 +118,12 @@ class HDHitsparksHandler : EventHandler
 			}
 
 			// smoke mid
-			particle.Size = 40 * puff.Scale.X;
+			particle.Size = 40 * trueScale.X;
 			for (int i = 0; i < 8; i++)
 			{
 				bool left = Random(True, False);
 
-				particle.Lifetime = TICRATE * FRandom(3, 6) * puff.Scale.X;
+				particle.Lifetime = TICRATE * FRandom(3, 6) * trueScale.X;
 				particle.Pos = e.Thing.Pos + (FRandom(-25, 25), FRandom(-25, 25), FRandom(-25, 25));
 				particle.Vel = (FRandom(-1.0, 1.0), FRandom(-1.0, 1.0), FRandom(-1.0, 1.0));
 				particle.Accel = (0, 0, -0.005);
