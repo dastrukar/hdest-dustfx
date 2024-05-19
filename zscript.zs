@@ -99,7 +99,7 @@ class HDHitsparksHandler : EventHandler
 			// big smoke fog thing
 			// very slow
 			particle.Size = 50 * trueScale.X;
-			for (int i = 0; i < 8; i++)
+			for (int i = 0; i < 10; i++)
 			{
 				bool left = Random(True, False);
 
@@ -119,7 +119,7 @@ class HDHitsparksHandler : EventHandler
 
 			// smoke mid
 			particle.Size = 40 * trueScale.X;
-			for (int i = 0; i < 8; i++)
+			for (int i = 0; i < 10; i++)
 			{
 				bool left = Random(True, False);
 
