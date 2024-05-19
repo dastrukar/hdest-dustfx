@@ -1,6 +1,6 @@
 version 4.11
 
-class HDHitsparksHandler : EventHandler
+class HDHitsparksHandler : StaticEventHandler
 {
 	override void WorldThingSpawned(WorldEvent e)
 	{
@@ -29,16 +29,16 @@ class HDHitsparksHandler : EventHandler
 			particle.Size = 30 * trueScale.X;
 			for (int i = 0; i < 4; i++)
 			{
-				bool left = Random(True, False);
+				bool left = Random[dustfx](True, False);
 
-				particle.Lifetime = TICRATE * FRandom(8, 12) * trueScale.X;
-				particle.Pos = e.Thing.Pos + (FRandom(-3, 3), FRandom(-3, 3), FRandom(-3, 3));
-				particle.Vel = (FRandom(0, 0.2) * angles.x + FRandom(-0.5, 0.5), FRandom(0, 0.2) * angles.y + FRandom(-0.5, 0.5), FRandom(0, 0.2) * pitch + FRandom(-0.5, 0.5));
+				particle.Lifetime = TICRATE * FRandom[dustfx](8, 12) * trueScale.X;
+				particle.Pos = e.Thing.Pos + (FRandom[dustfx](-3, 3), FRandom[dustfx](-3, 3), FRandom[dustfx](-3, 3));
+				particle.Vel = (FRandom[dustfx](0, 0.2) * angles.x + FRandom[dustfx](-0.5, 0.5), FRandom[dustfx](0, 0.2) * angles.y + FRandom[dustfx](-0.5, 0.5), FRandom[dustfx](0, 0.2) * pitch + FRandom[dustfx](-0.5, 0.5));
 				particle.Accel = (0, 0, -0.0025);
-				particle.StartAlpha = FRandom(1, 1.5);
+				particle.StartAlpha = FRandom[dustfx](1, 1.5);
 				particle.FadeStep = -1;
-				particle.SizeStep = FRandom(0.5, 0.8);
-				particle.StartRoll = Random(90, 360);
+				particle.SizeStep = FRandom[dustfx](0.5, 0.8);
+				particle.StartRoll = Random[dustfx](90, 360);
 				particle.RollVel = (left)? 0.5 : -0.5;
 				particle.RollAcc = (left)? -0.001 : 0.001;
 
@@ -49,16 +49,16 @@ class HDHitsparksHandler : EventHandler
 			particle.Size = 20 * trueScale.X;
 			for (int i = 0; i < 4; i++)
 			{
-				bool left = Random(True, False);
+				bool left = Random[dustfx](True, False);
 
-				particle.Lifetime = TICRATE * FRandom(3, 6) * trueScale.X;
-				particle.Pos = e.Thing.Pos + (FRandom(-3, 3), FRandom(-3, 3), FRandom(-3, 3));
-				particle.Vel = (FRandom(0, 0.5) * angles.x, FRandom(0, 0.5) * angles.y, FRandom(0, 0.5) * pitch);
+				particle.Lifetime = TICRATE * FRandom[dustfx](3, 6) * trueScale.X;
+				particle.Pos = e.Thing.Pos + (FRandom[dustfx](-3, 3), FRandom[dustfx](-3, 3), FRandom[dustfx](-3, 3));
+				particle.Vel = (FRandom[dustfx](0, 0.5) * angles.x, FRandom[dustfx](0, 0.5) * angles.y, FRandom[dustfx](0, 0.5) * pitch);
 				particle.Accel = (0, 0, -0.005);
-				particle.StartAlpha = FRandom(1, 1.5);
+				particle.StartAlpha = FRandom[dustfx](1, 1.5);
 				particle.FadeStep = -1;
-				particle.SizeStep = FRandom(0.5, 0.8);
-				particle.StartRoll = Random(90, 360);
+				particle.SizeStep = FRandom[dustfx](0.5, 0.8);
+				particle.StartRoll = Random[dustfx](90, 360);
 				particle.RollVel = (left)? 0.5 : -0.5;
 				particle.RollAcc = (left)? -0.001 : 0.001;
 
@@ -69,16 +69,16 @@ class HDHitsparksHandler : EventHandler
 			particle.Size = 10 * trueScale.X;
 			for (int i = 0; i < 4; i++)
 			{
-				bool left = Random(True, False);
+				bool left = Random[dustfx](True, False);
 
-				particle.Lifetime = TICRATE * FRandom(1, 3) * trueScale.X;
-				particle.Pos = e.Thing.Pos + (FRandom(-3, 3), FRandom(-3, 3), FRandom(-3, 3));
-				particle.Vel = (FRandom(0.5, 1.0) * angles.x, FRandom(0.5, 1.0) * angles.y, FRandom(0.5, 1.0) * pitch);
+				particle.Lifetime = TICRATE * FRandom[dustfx](1, 3) * trueScale.X;
+				particle.Pos = e.Thing.Pos + (FRandom[dustfx](-3, 3), FRandom[dustfx](-3, 3), FRandom[dustfx](-3, 3));
+				particle.Vel = (FRandom[dustfx](0.5, 1.0) * angles.x, FRandom[dustfx](0.5, 1.0) * angles.y, FRandom[dustfx](0.5, 1.0) * pitch);
 				particle.Accel = (0, 0, -0.005);
-				particle.StartAlpha = FRandom(1.5, 2.5);
+				particle.StartAlpha = FRandom[dustfx](1.5, 2.5);
 				particle.FadeStep = -1;
-				particle.SizeStep = FRandom(0.5, 0.8);
-				particle.StartRoll = Random(90, 360);
+				particle.SizeStep = FRandom[dustfx](0.5, 0.8);
+				particle.StartRoll = Random[dustfx](90, 360);
 				particle.RollVel = (left)? 0.5 : -0.5;
 				particle.RollAcc = (left)? -0.001 : 0.001;
 
@@ -101,16 +101,16 @@ class HDHitsparksHandler : EventHandler
 			particle.Size = 50 * trueScale.X;
 			for (int i = 0; i < 10; i++)
 			{
-				bool left = Random(True, False);
+				bool left = Random[dustfx](True, False);
 
-				particle.Lifetime = TICRATE * FRandom(8, 12) * trueScale.X;
-				particle.Pos = e.Thing.Pos + (FRandom(-20, 20), FRandom(-20, 20), FRandom(-20, 20));
-				particle.Vel = (FRandom(-0.5, 0.5), FRandom(-0.5, 0.5), FRandom(-0.5, 0.5));
+				particle.Lifetime = TICRATE * FRandom[dustfx](8, 12) * trueScale.X;
+				particle.Pos = e.Thing.Pos + (FRandom[dustfx](-20, 20), FRandom[dustfx](-20, 20), FRandom[dustfx](-20, 20));
+				particle.Vel = (FRandom[dustfx](-0.5, 0.5), FRandom[dustfx](-0.5, 0.5), FRandom[dustfx](-0.5, 0.5));
 				particle.Accel = (0, 0, -0.0025);
-				particle.StartAlpha = FRandom(1, 1.5);
+				particle.StartAlpha = FRandom[dustfx](1, 1.5);
 				particle.FadeStep = -1;
-				particle.SizeStep = FRandom(0.5, 0.8);
-				particle.StartRoll = Random(90, 360);
+				particle.SizeStep = FRandom[dustfx](0.5, 0.8);
+				particle.StartRoll = Random[dustfx](90, 360);
 				particle.RollVel = (left)? 0.5 : -0.5;
 				particle.RollAcc = (left)? -0.001 : 0.001;
 
@@ -121,16 +121,16 @@ class HDHitsparksHandler : EventHandler
 			particle.Size = 40 * trueScale.X;
 			for (int i = 0; i < 10; i++)
 			{
-				bool left = Random(True, False);
+				bool left = Random[dustfx](True, False);
 
-				particle.Lifetime = TICRATE * FRandom(3, 6) * trueScale.X;
-				particle.Pos = e.Thing.Pos + (FRandom(-25, 25), FRandom(-25, 25), FRandom(-25, 25));
-				particle.Vel = (FRandom(-1.0, 1.0), FRandom(-1.0, 1.0), FRandom(-1.0, 1.0));
+				particle.Lifetime = TICRATE * FRandom[dustfx](3, 6) * trueScale.X;
+				particle.Pos = e.Thing.Pos + (FRandom[dustfx](-25, 25), FRandom[dustfx](-25, 25), FRandom[dustfx](-25, 25));
+				particle.Vel = (FRandom[dustfx](-1.0, 1.0), FRandom[dustfx](-1.0, 1.0), FRandom[dustfx](-1.0, 1.0));
 				particle.Accel = (0, 0, -0.005);
-				particle.StartAlpha = FRandom(1, 1.5);
+				particle.StartAlpha = FRandom[dustfx](1, 1.5);
 				particle.FadeStep = -1;
-				particle.SizeStep = FRandom(0.5, 0.8);
-				particle.StartRoll = Random(90, 360);
+				particle.SizeStep = FRandom[dustfx](0.5, 0.8);
+				particle.StartRoll = Random[dustfx](90, 360);
 				particle.RollVel = (left)? 0.5 : -0.5;
 				particle.RollAcc = (left)? -0.001 : 0.001;
 
