@@ -8,6 +8,8 @@ Heavily inspired by F.E.A.R's effects.
 ## some notes
 Currently, only bullets and explosions (including wall-explosions) create dust. Might add more dust elsewhere.
 
+Also particles are not saved into savefiles, so the effects will just vanish when you reload a save.
+
 ## Credits:
 - Shampooh - initial idea for the dust effects
 - potetobloke - ideas and coding the initial particles and timings (thank you for adding roll to the textures)
